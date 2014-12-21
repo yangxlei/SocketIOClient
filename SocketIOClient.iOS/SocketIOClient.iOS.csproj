@@ -3,11 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{98715903-E72D-4591-A2B5-4781DCCE358B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{781125AE-164B-4314-B867-07A22AAB9828}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SocketIOClient</RootNamespace>
-    <AssemblyName>SocketIOClient</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>SocketIOClient.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SocketIOClient.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,30 +30,81 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SocketIO\Client.cs" />
-    <Compile Include="SocketIO\EndPointClient.cs" />
-    <Compile Include="SocketIO\ErrorEventArgs.cs" />
-    <Compile Include="SocketIO\IClient.cs" />
-    <Compile Include="SocketIO\IEndPointClient.cs" />
-    <Compile Include="SocketIO\MessageEventArgs.cs" />
-    <Compile Include="SocketIO\Helpers\SocketIOHandshake.cs" />
-    <Compile Include="SocketIO\Helpers\SocketIOMessageTypes.cs" />
-    <Compile Include="SocketIO\Messages\AckMessage.cs" />
-    <Compile Include="SocketIO\Messages\ConnectMessage.cs" />
-    <Compile Include="SocketIO\Messages\DisconnectMessage.cs" />
-    <Compile Include="SocketIO\Messages\ErrorMessage.cs" />
-    <Compile Include="SocketIO\Messages\EventMessage.cs" />
-    <Compile Include="SocketIO\Messages\Heartbeat.cs" />
-    <Compile Include="SocketIO\Messages\IMessage.cs" />
-    <Compile Include="SocketIO\Messages\JSONMessage.cs" />
-    <Compile Include="SocketIO\Messages\Message.cs" />
-    <Compile Include="SocketIO\Messages\NoopMessage.cs" />
-    <Compile Include="SocketIO\Messages\RegistrationManager.cs" />
-    <Compile Include="SocketIO\Messages\TextMessage.cs" />
-    <Compile Include="SocketIO\Messages\Helper\JsonEncodedEventMessage.cs" />
+    <Folder Include="Resources\" />
+    <Folder Include="Properties\" />
+    <Folder Include="SocketIO\" />
+    <Folder Include="websocket-sharp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\SocketIOClient\SocketIO\Client.cs">
+      <Link>SocketIO\Client.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\EndPointClient.cs">
+      <Link>SocketIO\EndPointClient.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\ErrorEventArgs.cs">
+      <Link>SocketIO\ErrorEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\IClient.cs">
+      <Link>SocketIO\IClient.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\IEndPointClient.cs">
+      <Link>SocketIO\IEndPointClient.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\MessageEventArgs.cs">
+      <Link>SocketIO\MessageEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Helpers\SocketIOHandshake.cs">
+      <Link>SocketIO\Helpers\SocketIOHandshake.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Helpers\SocketIOMessageTypes.cs">
+      <Link>SocketIO\Helpers\SocketIOMessageTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\AckMessage.cs">
+      <Link>SocketIO\Messages\AckMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\ConnectMessage.cs">
+      <Link>SocketIO\Messages\ConnectMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\DisconnectMessage.cs">
+      <Link>SocketIO\Messages\DisconnectMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\ErrorMessage.cs">
+      <Link>SocketIO\Messages\ErrorMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\EventMessage.cs">
+      <Link>SocketIO\Messages\EventMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\Heartbeat.cs">
+      <Link>SocketIO\Messages\Heartbeat.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\IMessage.cs">
+      <Link>SocketIO\Messages\IMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\JSONMessage.cs">
+      <Link>SocketIO\Messages\JSONMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\Message.cs">
+      <Link>SocketIO\Messages\Message.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\NoopMessage.cs">
+      <Link>SocketIO\Messages\NoopMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\RegistrationManager.cs">
+      <Link>SocketIO\Messages\RegistrationManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\TextMessage.cs">
+      <Link>SocketIO\Messages\TextMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIOClient\SocketIO\Messages\Helper\JsonEncodedEventMessage.cs">
+      <Link>SocketIO\Messages\Helper\JsonEncodedEventMessage.cs</Link>
+    </Compile>
     <Compile Include="..\external\websocket-sharp\websocket-sharp\ByteOrder.cs">
       <Link>websocket-sharp\ByteOrder.cs</Link>
     </Compile>
@@ -284,15 +336,8 @@
     <Compile Include="..\external\websocket-sharp\websocket-sharp\Server\WebSocketSessionManager.cs">
       <Link>websocket-sharp\Server\WebSocketSessionManager.cs</Link>
     </Compile>
-    <Compile Include="SimpleJson.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="SocketIO\" />
-    <Folder Include="websocket-sharp\" />
-    <Folder Include="websocket-sharp\Server\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="..\SocketIOClient\SimpleJson.cs">
+      <Link>SimpleJson.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>
