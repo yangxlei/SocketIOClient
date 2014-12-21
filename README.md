@@ -3,6 +3,10 @@ SocketIOClient
 
 SocketIOClient is a [Socket.IO](http://socket.io/) C# Client.
 
+|  | Build Status |
+| :------ | :------: |
+| **iOS** | [![Build Status](http://codefoco.zapto.org:8085/buildStatus/icon?job=SocketIOClient)](http://codefoco.zapto.org:8085/view/X/job/SocketIOClient/) |
+
 This is a fork of [UnitySocketIO-WebSocketSharp](https://github.com/kaistseo/UnitySocketIO-WebSocketSharp).
 
 Why this fork?
