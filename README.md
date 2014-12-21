@@ -52,7 +52,7 @@ Registering events:
 					Console.WriteLine (data.MessageText);
 				});
 				Dictionary<string, string> args = new Dictionary<string, string>();
-				args.Add("data", "What's up+?!!");
+				args.Add("data", "Hellow from SocketIOClient?!!");
 				socket.Emit("my_broadcast_event", args);
 			});
  ```
