@@ -1,0 +1,8 @@
+PROJECT=SocketIOClient.iOS.sln
+MDTOOL=/Applications/Xamarin\ Studio.app/Contents/MacOS/mdtool
+MTOUCH=/Developer/MonoTouch/usr/bin/mtouch
+
+all: build-device
+
+build-device:
+	$(MDTOOL) -v build -t:Build "-c:Release|iPhone" $(PROJECT)
