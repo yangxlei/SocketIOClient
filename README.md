@@ -16,7 +16,7 @@ Why websocketsharp is a submodule and not a NuGet package?
   * websocketsharp is awesome, but there is no build for Xamarin.iOS or Xamarin.Android on NuGet.
   
 How to install?
------------
+---------------
 
 Installing using NuGet:
 
