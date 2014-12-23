@@ -15,7 +15,7 @@ Why this fork?
   * Add CI, and NuGet package.
   
 Why are you not using PCL?
-  * PCL are great, but for this project use different solutions for each platform is enought, PCL doesn't have Timer or the Thread class, we want the use the original code "as-is".
+  * PCL is great, but for this project use different solutions for each platform is enought, PCL doesn't have Timer or the Thread class, we want the use the original code "as-is".
 Why websocketsharp is a submodule and not a NuGet package?
   * websocketsharp is awesome, but there is no build for Xamarin.iOS or Xamarin.Android on NuGet.
   
